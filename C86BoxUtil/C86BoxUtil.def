@@ -1,0 +1,11 @@
+LIBRARY  C86BoxUtil
+EXPORTS
+	C86BOXFindFirstDevice @1
+	C86BOXFindNextDevice @2
+	C86BOXOpenDevice @3
+	C86BOXCloseDevice @4
+	C86BOXGetBoardType @5
+	C86BOXGetBoardConf @6
+	C86BOXSetBoardConf @7
+	C86BOXWriteBus @8
+	C86BOXReadBus @9
