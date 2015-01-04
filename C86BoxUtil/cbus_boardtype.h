@@ -1,4 +1,4 @@
-﻿#ifndef CBUS_BOARDTYPE_H__
+#ifndef CBUS_BOARDTYPE_H__
 #define CBUS_BOARDTYPE_H__
 
 // CBUSボード種別定義
@@ -10,7 +10,7 @@ typedef enum {
 	
 	// PSG系 =========================================================
 	// (未対応) NEC PC-9801-14
-	//   アドレスデコーダ： 13bit
+	//   アドレスデコーダ： 14bit
 	CBUS_BOARD_14						= 0x00001,
 
 	// (未対応) システムサコム AMD-98
@@ -29,19 +29,25 @@ typedef enum {
 	// (未テスト) SNE Sound Orchestra : YM2203, YM3812
 	//   アドレスデコーダ： 不明
 	//   SOUNDID(0xA460) : 無し
-	//   IOADDR(OPN)   : 0188h/018Ah
-	//   IOADDR(YM3812): 018Ch/018Eh
+	//   IOADDR(OPN)   : 0188h/018Ah or 0088h/008Ah
+	//   IOADDR(YM3812): 018Ch/018Eh or 008Ch/008Eh
 	CBUS_BOARD_SOUND_ORCHESTRA			= 0x00012,
+	CBUS_BOARD_SOUND_ORCHESTRA_0188H	= 0x00012,
+	CBUS_BOARD_SOUND_ORCHESTRA_0088H	= 0x10012,
 
 	// (未テスト) SNE Sound Orchestra L : YM2203, YM3812
 	CBUS_BOARD_SOUND_ORCHESTRA_L		= 0x00022,
+	CBUS_BOARD_SOUND_ORCHESTRA_L_0188H	= 0x00022,
+	CBUS_BOARD_SOUND_ORCHESTRA_L_0088H	= 0x10022,
 	
 	// (未テスト) SNE Sound Orchestra V : YM2203, Y8950(w/ADPCM-RAM)
 	//   アドレスデコーダ： 不明
 	//   SOUNDID(0xA460) : 無し
-	//   IOADDR(OPN)  : 0188h/018Ah
-	//   IOADDR(Y8950): 018Ch/018Eh
+	//   IOADDR(OPN)  : 0188h/018Ah or 0088h/008Ah
+	//   IOADDR(Y8950): 018Ch/018Eh or 008Ch/008Eh
 	CBUS_BOARD_SOUND_ORCHESTRA_V		= 0x00032,
+	CBUS_BOARD_SOUND_ORCHESTRA_V_0188H	= 0x00032,
+	CBUS_BOARD_SOUND_ORCHESTRA_V_0088H	= 0x10032,
 	
 	// (未テスト) SNE Sound Orchestra VS : YM2203, Y8950(w/ADPCM-RAM)
 	//   アドレスデコーダ： 不明
@@ -201,6 +207,12 @@ typedef enum {
 	//   SOUNDID : 無し
 	//   IOADDR : 0188h/018Ah/018Ch/018Eh
 	CBUS_BOARD_SXM_F					= 0x000f3,
+	
+	// (未対応) SRN-F : YMF288-M
+	//   アドレスデコーダ: 不明
+	//   SOUNDID : 無し
+	//   IOADDR : 0188h/018Ah/018Ch/018Eh
+	CBUS_BOARD_SRN_F					= 0x00103,
 
 
 	// YM262(OPL3)系 =================================================
@@ -219,10 +231,7 @@ typedef enum {
 	
 	// (未対応) sound-blaster 16Value (CT3720) : YMF262-F
 	//   アドレスデコーダ : 不明(16bit以下)
-	//   IOADDR(OPN) : 0088h/008Ah or 0188h/018Ah
 	CBUS_BOARD_SB16VALUE				= 0x00024,
-	CBUS_BOARD_SB16VALUE_0188H			= 0x00024,
-	CBUS_BOARD_SB16VALUE_0088H			= 0x10024,
 	
 	// (未対応) canopus PowerWindow T64S : YMF262-M
 	CBUS_BOARD_POWERWINDOW_T64S			= 0x00034,
