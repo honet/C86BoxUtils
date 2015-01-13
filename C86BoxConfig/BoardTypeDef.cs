@@ -88,9 +88,9 @@ namespace C86BoxConfig
             new BoardInfo(0x100d3, "Q-Vision WaveStar （0288H設定）", "qvision_wavestar_0288"),
 
             new BoardInfo(0x000e3, "Buffalo WSN-A4F （未検証）", "buffalo_wsn_a4f"),
-            new BoardInfo(0x000e3, "Buffalo SXM-F （未検証）", "buffalo_sxm_f"),
+            new BoardInfo(0x000f3, "Buffalo SXM-F （未検証）", "buffalo_sxm_f"),
             new BoardInfo(0x00064, "Buffalo SRB-G （未検証）", "buffalo_srb_g"),
-            //new BoardInfo(0x00064, "Buffalo SRN-F （未検証）", "buffalo_srn_f"),
+            new BoardInfo(0x00103, "Buffalo SRN-F （未検証）", "buffalo_srn_f"),
 
             new BoardInfo(0x00004, "CREATIVE SoundBlaster16 [CT2720]（未検証）", "creative_sb16"),
             new BoardInfo(0x00014, "CREATIVE SoundBlaster16+YM2203 [CT2720]（0188H設定）（未検証）", "creative_sb16_2203_0188"),
