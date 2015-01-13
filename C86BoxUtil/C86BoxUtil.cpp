@@ -363,15 +363,15 @@ INT __stdcall C86BOXWriteBus(HANDLE hdev, uint8_t slot, uint32_t addr, uint16_t 
 	// build message packet.
 	UCHAR packet[64];
 	memset( &packet[0], 0, 64 );
-	packet[0] = 0xf0; // write address
-	packet[1] = (addr>>16)&0xf;
-	packet[2] = (addr>>8)&0xff;
-	packet[3] = addr&0xff;
+	packet[3] = 0xf0; // write address
+	packet[2] = (addr>>16)&0xf;
+	packet[1] = (addr>>8)&0xff;
+	packet[0] = addr&0xff;
 	
-	packet[4] = 0xf1; // write data
-	packet[5] = slot<<4;
-	packet[6] = (data>>8)&0xff;
-	packet[7] = data&0xff;
+	packet[7] = 0xf1; // write data
+	packet[6] = slot<<4;
+	packet[5] = (data>>8)&0xff;
+	packet[4] = data&0xff;
 	
 	DWORD wlen;
 	BOOL ret = WinUsb_WritePipe( dev->hWinUsb, dev->outPipeId, (UCHAR*)packet, 8, &wlen, 0);
@@ -401,10 +401,10 @@ INT __stdcall C86BOXReadBus(HANDLE hdev, uint8_t slot, uint32_t addr, uint16_t *
 	// build message packet.
 	UCHAR packet[64];
 	memset( &packet[0], 0, 64 );
-	packet[0] = 0xf2; // read request
-	packet[1] = (slot<<4) | ((addr>>16)&0xf);
-	packet[2] = (addr>>8)&0xff;
-	packet[3] = addr&0xff;
+	packet[3] = 0xf2; // read request
+	packet[2] = (slot<<4) | ((addr>>16)&0xf);
+	packet[1] = (addr>>8)&0xff;
+	packet[0] = addr&0xff;
 	
 	DWORD wlen;
 	BOOL ret = WinUsb_WritePipe( dev->hWinUsb, dev->outPipeId, (UCHAR*)packet, 4, &wlen, 0);
@@ -413,9 +413,9 @@ INT __stdcall C86BOXReadBus(HANDLE hdev, uint8_t slot, uint32_t addr, uint16_t *
 
 	DWORD rlen;
 	//DWORD err = ::GetLastError();
-	ret = WinUsb_ReadPipe(dev->hWinUsb, dev->inPipeId, (UCHAR*)packet, 4, &rlen, 0);
+	ret = WinUsb_ReadPipe(dev->hWinUsb, dev->inPipeId, (UCHAR*)packet, 2, &rlen, 0);
 	//err = ::GetLastError();
-	if (ret == FALSE || 4 != rlen)
+	if (ret == FALSE || 2 != rlen)
 		goto err;
 
 	*data = *(uint16_t*)&packet[0];
