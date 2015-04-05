@@ -1,4 +1,4 @@
-/***
+﻿/***
 	C86BoxUtil
 	
 	Copyright (c) 2015, honet. All rights reserved.
