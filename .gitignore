@@ -1,5 +1,8 @@
 C86BoxConfig/obj/
 C86BoxUtil/win32/
+release/
+bin/
+obj/
 win32/
 ipch/
 *.exe
