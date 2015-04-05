@@ -1,4 +1,12 @@
-﻿using System;
+﻿/***
+	C86BoxConfig
+	
+	Copyright (c) 2015, honet. All rights reserved.
+	This software is licensed under the BSD license.
+
+	honet.kk(at)gmail.com
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +19,11 @@ using C86BoxUtil;
 
 namespace C86BoxConfig
 {
-    public partial class Form1 : Form, IDisposable
+    public partial class MainForm : Form, IDisposable
     {
         IntPtr hdev = IntPtr.Zero;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -27,7 +35,7 @@ namespace C86BoxConfig
                 C86BoxUtilDelegate.C86BOXCloseDevice(hdev);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             BoardTypeDef.list.ForEach(delegate(BoardTypeDef.BoardInfo info) {
                 comboBoxBoardTypeA.Items.Add(info.name);

@@ -1,4 +1,12 @@
-﻿using System;
+﻿/***
+	C86BoxConfig
+	
+	Copyright (c) 2015, honet. All rights reserved.
+	This software is licensed under the BSD license.
+
+	honet.kk(at)gmail.com
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +24,7 @@ namespace C86BoxConfig
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }

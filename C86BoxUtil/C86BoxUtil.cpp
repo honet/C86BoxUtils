@@ -1,5 +1,11 @@
-﻿// C86BoxUtil.cpp : DLL アプリケーション用にエクスポートされる関数を定義します。
-//
+﻿/***
+	C86BoxUtil
+	
+	Copyright (c) 2015, honet. All rights reserved.
+	This software is licensed under the BSD license.
+
+	honet.kk(at)gmail.com
+ */
 
 #include "stdafx.h"
 #include <setupapi.h>
@@ -101,7 +107,8 @@ int findIndex = 0;
 static VOID C86BOXFindDeviceClose()
 {
 	if (devinf!=INVALID_HANDLE_VALUE)
-	SetupDiDestroyDeviceInfoList(devinf);
+		SetupDiDestroyDeviceInfoList(devinf);
+
 	devinf = INVALID_HANDLE_VALUE;
 	findIndex = 0;
 }

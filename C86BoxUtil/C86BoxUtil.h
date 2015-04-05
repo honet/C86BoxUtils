@@ -1,4 +1,13 @@
-﻿#pragma once
+﻿/***
+	C86BoxUtil
+	
+	Copyright (c) 2015, honet. All rights reserved.
+	This software is licensed under the BSD license.
+
+	honet.kk(at)gmail.com
+ */
+
+#pragma once
 
 #include <windows.h>
 #include <stdint.h>

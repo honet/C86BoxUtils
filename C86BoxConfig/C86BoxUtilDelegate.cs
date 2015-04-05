@@ -1,4 +1,12 @@
-﻿using System;
+﻿/***
+	C86BoxConfig
+	
+	Copyright (c) 2015, honet. All rights reserved.
+	This software is licensed under the BSD license.
+
+	honet.kk(at)gmail.com
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
