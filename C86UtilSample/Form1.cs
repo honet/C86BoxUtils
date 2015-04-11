@@ -87,5 +87,42 @@ namespace C86BoxUtilSample
             }
 
         }
+
+        private void buttonChipWrite_Click(object sender, EventArgs e)
+        {
+            if (devHandle != IntPtr.Zero) {
+                byte slot = byte.Parse(textBoxSlotNo.Text, System.Globalization.NumberStyles.HexNumber);
+                UInt32 areg = UInt32.Parse(textBoxARegADDR.Text, System.Globalization.NumberStyles.HexNumber);
+                UInt32 dreg = UInt32.Parse(textBoxDRegADDR.Text, System.Globalization.NumberStyles.HexNumber);
+                UInt16 addr = UInt16.Parse(textBoxChipAddress.Text, System.Globalization.NumberStyles.HexNumber);
+                UInt16 data = UInt16.Parse(textBoxChipData.Text, System.Globalization.NumberStyles.HexNumber);
+
+                int result = C86BoxUtilDelegate.C86BOXWriteBus(devHandle, slot, areg, addr);
+                textBoxResult.Text = "WriteBus: result=" + result.ToString() + "   ";
+                textBoxResult.Text += String.Format("slot:{0:d}, addr:{1:X} <= {2:X}\r\n", slot, areg, addr);
+
+                result = C86BoxUtilDelegate.C86BOXWriteBus(devHandle, slot, dreg, data);
+                textBoxResult.Text += "WriteBus: result=" + result.ToString() + "   ";
+                textBoxResult.Text += String.Format("slot:{0:d}, addr:{1:X} <= {2:X}\r\n", slot, dreg, data);
+            }
+        }
+
+        private void buttonChipRead_Click(object sender, EventArgs e)
+        {
+            if (devHandle != IntPtr.Zero) {
+                byte slot = byte.Parse(textBoxSlotNo.Text, System.Globalization.NumberStyles.HexNumber);
+                UInt32 areg = UInt32.Parse(textBoxARegADDR.Text, System.Globalization.NumberStyles.HexNumber);
+                UInt32 dreg = UInt32.Parse(textBoxDRegADDR.Text, System.Globalization.NumberStyles.HexNumber);
+                UInt16 addr = UInt16.Parse(textBoxChipAddress.Text, System.Globalization.NumberStyles.HexNumber);
+                UInt16 data;
+                int result = C86BoxUtilDelegate.C86BOXWriteBus(devHandle, slot, areg, addr);
+                textBoxResult.Text = "WriteBus: result=" + result.ToString() + "   ";
+                textBoxResult.Text += String.Format("slot:{0:d}, addr:{1:X} <= {2:X}\r\n", slot, areg, addr);
+
+                result = C86BoxUtilDelegate.C86BOXReadBus(devHandle, slot, dreg, out data);
+                textBoxResult.Text += "ReadBus: result=" + result.ToString() + "   ";
+                textBoxResult.Text += String.Format("slot:{0:d}, addr:{1:X} => {2:X}\r\n", slot, dreg, data);
+            }
+        }
     }
 }
