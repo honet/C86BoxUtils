@@ -30,7 +30,7 @@ typedef enum {
 
 	// YM2203(OPN)系 =================================================
 	// NEC PC-9801-26, 26K
-	//   アドレスデコーダ： 不明
+	//   アドレスデコーダ： 12bit
 	//   SOUNDID(0xA460) : 無し
 	//   IOADDR: 0188h/018Ah
 	CBUS_BOARD_26						= 0x00002,
@@ -45,12 +45,16 @@ typedef enum {
 	CBUS_BOARD_SOUND_ORCHESTRA_0088H	= 0x10012,
 
 	// (未テスト) SNE Sound Orchestra L : YM2203, YM3812
+	//   アドレスデコーダ： 12bit
+	//   SOUNDID(0xA460) : 無し
+	//   IOADDR(OPN)  : 0188h/018Ah or 0088h/008Ah
+	//   IOADDR(Y8950): 018Ch/018Eh or 008Ch/008Eh
 	CBUS_BOARD_SOUND_ORCHESTRA_L		= 0x00022,
 	CBUS_BOARD_SOUND_ORCHESTRA_L_0188H	= 0x00022,
 	CBUS_BOARD_SOUND_ORCHESTRA_L_0088H	= 0x10022,
 	
 	// (未テスト) SNE Sound Orchestra V : YM2203, Y8950(w/ADPCM-RAM)
-	//   アドレスデコーダ： 不明
+	//   アドレスデコーダ： 12bit
 	//   SOUNDID(0xA460) : 無し
 	//   IOADDR(OPN)  : 0188h/018Ah or 0088h/008Ah
 	//   IOADDR(Y8950): 018Ch/018Eh or 008Ch/008Eh
@@ -59,7 +63,7 @@ typedef enum {
 	CBUS_BOARD_SOUND_ORCHESTRA_V_0088H	= 0x10032,
 	
 	// (未テスト) SNE Sound Orchestra VS : YM2203, Y8950(w/ADPCM-RAM)
-	//   アドレスデコーダ： 不明
+	//   アドレスデコーダ： 12bit
 	//   SOUNDID(0xA460) : 無し
 	//   IOADDR(OPN)  : 0188h/018Ah or 0088h/008Ah
 	//   IOADDR(Y8950): 018Ch/018Eh or 008Ch/008Eh
@@ -185,7 +189,7 @@ typedef enum {
 	CBUS_BOARD_OTOMI_388H				= 0x300a3,
 
 	// Q-Vision WaveMaster(86互換) : YM2608, CS4231
-	//   アドレスデコーダ： 不明
+	//   アドレスデコーダ： 16bit以上
 	//   SOUNDID(0xA460) : 0x40 / 0x50 (86互換)
 	//   IOADDR: 0188h/018Ah/018Ch/018Eh or 0288h/028Ah/028Ch/028Eh
 	CBUS_BOARD_WAVEMASTER				= 0x000b3,
@@ -193,7 +197,7 @@ typedef enum {
 	CBUS_BOARD_WAVEMASTER_0288H			= 0x100b3,
 	
 	// Q-Vision WaveSMIT(86互換) : YMF288-S, CS4231
-	//   アドレスデコーダ： 不明
+	//   アドレスデコーダ： 16bit以上
 	//   SOUNDID(0xA460) : 0x40 / 0x50 (86互換)
 	//   IOADDR: 0188h/018Ah/018Ch/018Eh or 0288h/028Ah/028Ch/028Eh
 	CBUS_BOARD_WAVESMIT					= 0x000c3,
@@ -201,14 +205,17 @@ typedef enum {
 	CBUS_BOARD_WAVESMIT_0288H			= 0x100c3,
 	
 	// Q-Vision WaveStar(86互換) : YMF288-S, CS4231
-	//   アドレスデコーダ： 不明
+	//   アドレスデコーダ： 16bit以上
 	//   SOUNDID(0xA460) : 0x40 / 0x50 (86互換)
 	//   IOADDR: 0188h/018Ah/018Ch/018Eh or 0288h/028Ah/028Ch/028Eh
 	CBUS_BOARD_WAVESTAR					= 0x000d3,
 	CBUS_BOARD_WAVESTAR_0188H			= 0x000d3,
 	CBUS_BOARD_WAVESTAR_0288H			= 0x100d3,
 	
-	// (未対応) Buffalo WSN-A4F : YMF288-S
+	// (未対応) Buffalo WSN-A4F/A2F : YMF288-S
+	//   アドレスデコーダ: 16bit以上
+	//   SOUNDID : 無し
+	//   IOADDR : 0188h/018Ah/018Ch/018Eh
 	CBUS_BOARD_WSN_A4F					= 0x000e3,
 	
 	// (未対応) SXM-F : YMF288-M
@@ -218,7 +225,7 @@ typedef enum {
 	CBUS_BOARD_SXM_F					= 0x000f3,
 	
 	// (未対応) SRN-F : YMF288-M
-	//   アドレスデコーダ: 不明
+	//   アドレスデコーダ: 16bit以上
 	//   SOUNDID : 無し
 	//   IOADDR : 0188h/018Ah/018Ch/018Eh
 	CBUS_BOARD_SRN_F					= 0x00103,
@@ -266,7 +273,14 @@ typedef enum {
 	CBUS_BOARD_118						= 0x00006,
 
 
+	// オリジナルボード系 ======================================
+	CBUS_BOARD_SID98					= 0x0000E,
+
+
+	// =========================================================
+	// オート判別
 	CBUS_BOARD_AUTO = 0x40000000
+
 } CBUS_BOARD_TYPE;
 
 

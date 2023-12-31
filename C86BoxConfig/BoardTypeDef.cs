@@ -108,8 +108,9 @@ namespace C86BoxConfig
 
             new BoardInfo(0x00034, "Canopus PowerWindow T64S （未検証）", "canopus_powerwindow_t64s"),
             new BoardInfo(0x00044, "EPSON PCSB2 （未検証）", "epson_pcsb2"),
-            new BoardInfo(0x00054, "コンピュータテクニカ WGS-98S （未検証）", "computertechnica_wgs98s")
+            new BoardInfo(0x00054, "コンピュータテクニカ WGS-98S （未検証）", "computertechnica_wgs98s"),
 
+            new BoardInfo(0x0000E, "SID98", "honet_sid98")
         };
 
         public static int FindIndexByID(uint id)

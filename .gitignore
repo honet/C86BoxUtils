@@ -19,5 +19,5 @@ ipch/
 *.pdb
 *.exp
 *.idb
-
+*~
 

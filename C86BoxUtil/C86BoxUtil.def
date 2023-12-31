@@ -1,4 +1,4 @@
-LIBRARY  C86BoxUtil
+﻿LIBRARY  C86BoxUtil
 EXPORTS
 	C86BOXFindFirstDevice @1
 	C86BOXFindNextDevice @2
