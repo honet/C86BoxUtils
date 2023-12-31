@@ -33,7 +33,7 @@ namespace C86BoxConfig
             new BoardInfo(0, "接続なし", "none"),
             new BoardInfo(0x40000000, "自動設定", "none"),
             
-            new BoardInfo(0x00001, "NEC PC-9801-14 (1188H) （未検証）", "nec_pc9801_14"),
+            new BoardInfo(0x00001, "NEC PC-9801-14 （88H設定）", "nec_pc9801_14"),
             new BoardInfo(0x00002, "NEC PC-9801-26/26K", "nec_pc9801_26"),
             new BoardInfo(0x00003, "NEC PC-9801-73 （0188H設定）", "nec_pc9801_73_0188"),
             new BoardInfo(0x10003, "NEC PC-9801-73 （0088H設定）", "nec_pc9801_73_0288"),
