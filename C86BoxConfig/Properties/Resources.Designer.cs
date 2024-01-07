@@ -433,6 +433,26 @@ namespace C86BoxConfig.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap roland_mpu_98 {
+            get {
+                object obj = ResourceManager.GetObject("roland_mpu_98", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap roland_mpu_98ii {
+            get {
+                object obj = ResourceManager.GetObject("roland_mpu_98ii", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap sacom_amd98 {
             get {
                 object obj = ResourceManager.GetObject("sacom_amd98", resourceCulture);

@@ -110,7 +110,11 @@ namespace C86BoxConfig
             new BoardInfo(0x00044, "EPSON PCSB2 （未検証）", "epson_pcsb2"),
             new BoardInfo(0x00054, "コンピュータテクニカ WGS-98S （未検証）", "computertechnica_wgs98s"),
 
-            new BoardInfo(0x0000E, "SID98", "honet_sid98")
+            new BoardInfo(0x0000E, "SID98", "honet_sid98"),
+
+        	// MIDI I/F系 ======================================
+            new BoardInfo(0x01001, "Roland MPU-98", "roland_mpu_98"),
+            new BoardInfo(0x01002, "Roland MPU-98II", "roland_mpu_98ii")
         };
 
         public static int FindIndexByID(uint id)
