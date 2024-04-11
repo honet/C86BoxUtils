@@ -36,9 +36,9 @@ namespace C86BoxConfig
             new BoardInfo(0x00001, "NEC PC-9801-14 （88H設定）", "nec_pc9801_14"),
             new BoardInfo(0x00002, "NEC PC-9801-26/26K", "nec_pc9801_26"),
             new BoardInfo(0x00003, "NEC PC-9801-73 （0188H設定）", "nec_pc9801_73_0188"),
-            new BoardInfo(0x10003, "NEC PC-9801-73 （0088H設定）", "nec_pc9801_73_0288"),
+            new BoardInfo(0x10003, "NEC PC-9801-73 （0288H設定）", "nec_pc9801_73_0288"),
             new BoardInfo(0x00023, "NEC PC-9801-86 （0188H設定）", "nec_pc9801_86_0188"),
-            new BoardInfo(0x10023, "NEC PC-9801-86 （0088H設定）", "nec_pc9801_86_0288"),
+            new BoardInfo(0x10023, "NEC PC-9801-86 （0288H設定）", "nec_pc9801_86_0288"),
             new BoardInfo(0x00006, "NEC PC-9801-118", "nec_pc9801_118"),
 
             new BoardInfo(0x00011, "システムサコム AMD-98 (0x0000) （未検証）", "sacom_amd98" ),
