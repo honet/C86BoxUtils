@@ -39,7 +39,8 @@ namespace C86BoxConfig
             new BoardInfo(0x10003, "NEC PC-9801-73 （0288H設定）", "nec_pc9801_73_0288"),
             new BoardInfo(0x00023, "NEC PC-9801-86 （0188H設定）", "nec_pc9801_86_0188"),
             new BoardInfo(0x10023, "NEC PC-9801-86 （0288H設定）", "nec_pc9801_86_0288"),
-            new BoardInfo(0x00006, "NEC PC-9801-118", "nec_pc9801_118"),
+            new BoardInfo(0x00006, "NEC PC-9801-118 （OPNA-mode）", "nec_pc9801_118"),
+            new BoardInfo(0x10006, "NEC PC-9801-118 （OPL3-mode）", "nec_pc9801_118"),
 
             new BoardInfo(0x00011, "システムサコム AMD-98 (0x0000) （未検証）", "sacom_amd98" ),
             
@@ -95,15 +96,15 @@ namespace C86BoxConfig
             new BoardInfo(0x000d3, "Q-Vision WaveStar （0188H設定）", "qvision_wavestar_0188"),
             new BoardInfo(0x100d3, "Q-Vision WaveStar （0288H設定）", "qvision_wavestar_0288"),
 
-            new BoardInfo(0x000e3, "Buffalo WSN-A4F （未検証）", "buffalo_wsn_a4f"),
+            new BoardInfo(0x000e3, "Buffalo WSN-A2F/A4F", "buffalo_wsn_a4f"),
             new BoardInfo(0x000f3, "Buffalo SXM-F （未検証）", "buffalo_sxm_f"),
             new BoardInfo(0x00064, "Buffalo SRB-G （未検証）", "buffalo_srb_g"),
-            new BoardInfo(0x00103, "Buffalo SRN-F （未検証）", "buffalo_srn_f"),
+            new BoardInfo(0x00103, "Buffalo SRN-F", "buffalo_srn_f"),
 
-            new BoardInfo(0x00004, "CREATIVE SoundBlaster16 [CT2720]（未検証）", "creative_sb16"),
-            new BoardInfo(0x00014, "CREATIVE SoundBlaster16+YM2203 [CT2720]（0188H設定）（未検証）", "creative_sb16_2203_0188"),
-            new BoardInfo(0x10014, "CREATIVE SoundBlaster16+YM2203 [CT2720]（0088H設定）（未検証）", "creative_sb16_2203_0088"),
-            new BoardInfo(0x00024, "CREATIVE SoundBlaster16Value [CT3720]（未検証）", "creative_sb16value"),
+            new BoardInfo(0x00004, "CREATIVE SoundBlaster16 [CT2720]", "creative_sb16"),
+            new BoardInfo(0x00014, "CREATIVE SoundBlaster16+YM2203 [CT2720]（0188H設定）", "creative_sb16_2203_0188"),
+            new BoardInfo(0x10014, "CREATIVE SoundBlaster16+YM2203 [CT2720]（0088H設定）", "creative_sb16_2203_0088"),
+            new BoardInfo(0x00024, "CREATIVE SoundBlaster16Value [CT3720]", "creative_sb16value"),
             new BoardInfo(0x00005, "CREATIVE SoundBlaster AWE32 [CT3610] （未検証）", "creative_sb_awe32"),
 
             new BoardInfo(0x00034, "Canopus PowerWindow T64S （未検証）", "canopus_powerwindow_t64s"),
